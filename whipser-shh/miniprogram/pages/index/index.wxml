@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='head'>
+    <navigator url="/pages/post/post" class='post-nav'>
+      <image class='post-icon' src='/images/plus.png'></image>
+      </navigator>  
+  </view>
+  <view class="search">
+    <view class='search-box'>
+      <icon class="search-icon" type='search'></icon>
+      <input class="search-input" size='20' placeholder=' search content'></input>
+    </view>
+    <view class='search-btn'>
+      <button class='search-button' hover-class='search-button-hover'>Search</button>
+    </view>   
+  </view>
+  <view class="tag">
+    <button class='tag-button' hover-class='tag-button-hover'>
+      <image class='tag-icon' src='/images/love-red.png'></image>Love
+    </button>
+    <button class='tag-button' hover-class='tag-button-hover'>
+      <image class='tag-icon' src='/images/rest-yellow.png'></image>Life
+    </button>
+    <button class='tag-button' hover-class='tag-button-hover'>
+      <image class='tag-icon' src='/images/game-green.png'></image>Game
+    </button>
+    <button class='tag-button' hover-class='tag-button-hover'>
+      <image class='tag-icon' src='/images/study-blue.png'></image>Study
+    </button>
+  </view>
+
+  <view class="post">
+    <view class="post-head">
+      <view class='post-nickname'>{{}}</view>
+      <view class='post-time'>5 hours ago</view>
+    </view>
+    <view class='line'></view>
+    <view class="post-content">
+      <text>Example post content1</text>
+    </view>
+    <view class="post-button">
+      <view class='post-blank'></view>
+      <button class="like" hover-class='like-hover'>
+        <image class='like-icon' src='/images/like.png'></image>
+      </button>
+      <button class="comment" hover-class='comment-hover'>
+        <image class='comment-icon' src='/images/comment.png'></image></button>
+      <button class='report' hover-class='report-hover'>
+        <image class='report-icon' src='/images/report.png'></image></button>
+    </view>
+    <view class="post-comment">
+      <text class='comment-title'>Comments</text>
+      <view class='line'></view>
+      <text class="comment-text">Example comment 1</text> 
+    </view>
+  </view>
+    <view class="post">
+    <view class="post-head">
+      <view class='post-nickname'>Nickname</view>
+      <view class='post-time'>8 hours ago</view>
+    </view>
+    <view class='line'></view>
+    <view class="post-content">
+      <text>Example post content2</text>
+    </view>
+    <view class='post-image'>
+      <image class='post-image-image' mode='aspectFit' src='/images/post-image-example.jpg'></image>
+    </view>
+    <view class="post-button">
+      <view class='post-blank'></view>
+      <button class="like" hover-class='like-hover'>
+        <image class='like-icon' src='/images/like.png'></image></button>
+      <button class="comment" hover-class='comment-hover'>
+        <image class='comment-icon' src='/images/comment.png'></image></button>
+      <button class='report' hover-class='report-hover'>
+        <image class='report-icon' src='/images/report.png'></image></button>
+    </view>
+    <view class="post-comment">
+      <text class="comment-title">Comments</text>
+      <view class="line"></view>
+      <text class="comment-text">Example comment1</text>
+      <view class="line"></view>
+      <text class="comment-text">Example comment2</text>
+    </view>
+  </view>
+
+</view>

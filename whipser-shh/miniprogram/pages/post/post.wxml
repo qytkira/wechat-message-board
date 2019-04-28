@@ -1,0 +1,32 @@
+<view class='container'>
+  <view class='content'>
+    <textarea class='input-textarea' placeholder='Say something...' bindinput='message'></textarea>
+    <button class='uploadPic' hover-class='uploadPic-hover'>
+      <image class='uploadPic-icon' src='/images/picture-white.png'></image>
+    </button>
+    <input class='nickname-input' placeholder='Nickname' placeholder-class='ph-class'></input>
+  </view>
+
+  <view class='tag'>
+    <view class='tag-head'>
+      <text>Add tag</text>
+    </view>
+    <view class='tag-row1'>
+      <button class='tag-button' hover-class='tag-button-hover'>
+        <image class='tag-icon' src='/images/hash-red.png'></image>Love</button>
+      <button class='tag-button' hover-class='tag-button-hover'>
+        <image class='tag-icon' src='/images/hash-yellow.png' ></image>Life</button>
+      <button class='tag-button' hover-class='tag-button-hover'>
+        <image class='tag-icon' src='/images/hash-green.png'></image>Game</button>
+    </view>
+    <view class='tag-row2'>
+      <button class='tag-button' hover-class='tag-button-hover'>
+        <image class='tag-icon' src='/images/hash-blue.png'></image>Study</button>
+      <button class='tag-button' hover-class='tag-button-hover'>
+        <image class='tag-icon' src='/images/hash-grey.png'></image>noTag</button>
+    </view>
+  </view>
+  <view class='send' >
+    <button class='send-button' hover-class='send-button-hover'>Send</button>
+  </view>
+</view>
