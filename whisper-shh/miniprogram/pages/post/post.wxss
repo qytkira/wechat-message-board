@@ -1,0 +1,109 @@
+page{
+  background-color: #f0f0f0
+}
+.content{
+  background-color: #ffffff;
+  width: 670rpx;
+  height: 560rpx;
+  margin: 40rpx;
+  border-radius: 10rpx;
+}
+.input-textarea{
+  background-color: #fff;
+  width: 650rpx;
+  height: 250rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  font-size: 40rpx;
+}
+.uploadPic{
+  background-color: #eee;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 10rpx;
+  margin: 40rpx;
+}
+.uploadPic-icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+.uploadPic-hover{
+  background-color: #f0f0f0;
+  opacity: 0.7;
+}
+.nickname-input{
+  width: 590rpx;
+  height: 70rpx;
+  background-color: #f0f0f0;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+}
+.ph-class{
+  color: #888;
+  font-size: 40rpx;
+}
+.tag{
+  background-color: #ffffff;
+  width: 670rpx;
+  height: 300rpx;
+  margin: 40rpx;
+  border-radius: 10rpx;
+}
+.tag-head{
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  font-size: 40rpx;
+  color: 	#4B0082;
+}
+.tag-row1{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tag-row2{
+  margin-top: 30rpx;
+  margin-left: 90rpx;
+  margin-right: 120rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tag-button{
+  margin-left: 16rpx;
+  width: 190rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  font-size: 38rpx;
+  line-height: 1.15;
+  display: flex;
+  flex-direction: row;
+  padding-left: 15rpx;
+  padding-top: 15rpx;
+  color: #555;
+}
+.tag-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 5rpx;
+}
+.tag-button-hover{
+  background-color: #f0f0f0;
+}
+.send{
+  align-items: center;
+}
+.send-button{
+  width: 670rpx;
+  height: 95rpx;
+  background-color: #9370DB;
+  color: #fff;
+  font-size: 40rpx;
+  letter-spacing: 1rpx;
+}
+.send-button-hover{
+  opacity: 0.7;
+}

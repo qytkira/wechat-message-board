@@ -1,0 +1,87 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="search">
+    <view class='search-box'>
+      <icon class="search-icon" size='20' type='search'></icon>
+      <input class="search-input"  placeholder=' search content'></input>
+    </view>
+    <view class='search-btn'>
+      <button class='search-button' hover-class='search-button-hover'>Search</button>
+    </view>   
+  </view>
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">Latest</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">Hottest</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">Tags</view>  
+</view>  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- Latest -->  
+    <swiper-item>  
+      <view class="post" wx:for="{{dataset}}">
+        <view class="post-head">
+          <view class='post-nickname'>
+            <button class='nickname-button' hover-class='nickname-button-hover'>{{item.nikeName}}</button>
+          </view>
+          <view class='post-time'>{{item.date}}</view>
+        </view>
+        <view class='line'></view>
+        <view class='post-tag'>{{item.tags}}
+        </view>
+        <view class="post-content">{{item.message}}
+        </view>
+        <view class='post-image'>
+	      <image class='post-image-image' src='{{item.imgUrl}}'></image>
+        </view>
+        <view class="post-button">
+          <view class='post-blank'></view>
+          <button class="{{isLiked?'like-liked':'like-notLiked'}}" bindtap='tapLike' >
+            <text>1</text>
+          </button>
+          <button class="comment" bindtap='showComment' hover-class='comment-hover'>
+            <image class='comment-icon' src='/images/comment.png'></image></button>
+          <button class='report' hover-class='report-hover'>
+            <image class='report-icon' src='/images/report.png'></image></button>
+        </view>
+        <view class="{{isFold?'post-comment-hide':'post-comment-show'}}">
+          <text class='comment-title'>Comments</text>
+          <view class='line'></view>
+          <text class="comment-text">Example comment 1</text>
+          <input class='comment-input' placeholder='Comment...'></input> 
+        </view>
+      </view>  
+    </swiper-item>
+
+    <!-- Hottest -->  
+    <swiper-item>  
+      <view class="post">
+        <view class="post-head">
+          <view class='post-nickname'>Nickname</view>
+          <view class='post-time'>5 hours ago</view>
+        </view>
+        <view class='line'></view>
+        <view class="post-content">
+          <text>Example post content1</text>
+        </view>
+        <view class="post-button">
+          <view class='post-blank'></view>
+          <button class="like" hover-class='like-hover'>
+            <image class='like-icon' src='/images/like.png'></image>
+          </button>
+          <button class="comment" hover-class='comment-hover'>
+            <image class='comment-icon' src='/images/comment.png'></image></button>
+          <button class='report' hover-class='report-hover'>
+            <image class='report-icon' src='/images/report.png'></image></button>
+        </view>
+        <view class="post-comment">
+          <text class='comment-title'>Comments</text>
+          <view class='line'></view>
+          <text class="comment-text">Example comment 1</text> 
+        </view>
+      </view>
+    </swiper-item>  
+    <!-- Tags -->  
+    <swiper-item>  
+    </swiper-item>  
+  </swiper>
+</view>
