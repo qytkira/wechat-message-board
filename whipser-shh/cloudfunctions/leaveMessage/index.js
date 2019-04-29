@@ -14,6 +14,8 @@ exports.main = async (event, context) => {
       openid: event.openid,
       nickName: event.nickName,
       imgUrl: event.imgUrl,
+      date: event.date,
+      tags: event.tags
     }
   })
 }

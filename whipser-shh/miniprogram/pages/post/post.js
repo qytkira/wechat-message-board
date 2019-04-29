@@ -1,7 +1,7 @@
 // pages/post/post.js
 const db = wx.cloud.database()
 const userInfo = db.collection('userInfo')
-var tags = new Array()
+var tags = new Array
 
 Page({
 
@@ -9,10 +9,12 @@ Page({
    * Page initial data
    */
   data: {
+    date: {},
     openid: '',
     message: '',
     nickName: '',
-    imgUrl: '/images/picture-white.png'
+    imgUrl: '/images/picture-white.png',
+    tags: []
   },
 
   /**
@@ -91,19 +93,28 @@ Page({
   },
 
   love: function(event){
-    tags.push("Love")
+    if(tags.indexOf('love') == -1){
+      tags.push('love')
+    }
+    console.log(tags)
   },
 
   life: function (event) {
-    tags.push("life")
+    if (tags.indexOf('life') == -1) {
+      tags.push('life')
+    }
   },
 
   game: function (event) {
-    tags.push("game")
+    if (tags.indexOf('game') == -1) {
+      tags.push('game')
+    }
   },
 
   study: function (event) {
-    tags.push("study")
+    if (tags.indexOf('study') == -1) {
+      tags.push('study')
+    }
   },
 
   uploadPic: function(event){
@@ -132,7 +143,9 @@ Page({
               openid: this.data.openid,
               message: this.data.message,
               nickName: this.data.nickName,
-              imgUrl: res.fileID
+              imgUrl: res.fileID,
+              date: new Date().toJSON(),
+              tags: tags
             },
             complete: res => {
               console.log(res)

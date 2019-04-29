@@ -14,10 +14,10 @@
     <view class='tag-row1'>
       <button class='tag-button' hover-class='tag-button-hover' bindtap='love'>
         <image class='tag-icon' src='/images/hash-red.png'></image>Love</button>
-      <button class='tag-button' hover-class='tag-button-hover' >
-        <image class='tag-icon' src='/images/hash-yellow.png' bindtap='life'></image>Life</button>
-      <button class='tag-button' hover-class='tag-button-hover'>
-        <image class='tag-icon' src='/images/hash-green.png'bindtap='game'></image>Game</button>
+      <button class='tag-button' hover-class='tag-button-hover' bindtap='life'>
+        <image class='tag-icon' src='/images/hash-yellow.png' ></image>Life</button>
+      <button class='tag-button' hover-class='tag-button-hover' bindtap='game'>
+        <image class='tag-icon' src='/images/hash-green.png'></image>Game</button>
     </view>
     <view class='tag-row2'>
       <button class='tag-button' hover-class='tag-button-hover' bindtap='study'>
