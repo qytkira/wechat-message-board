@@ -1,5 +1,5 @@
 const db = wx.cloud.database()
-const messages = db.collection('messages')
+const messages = db.collection('messages').orderBy('date', 'desc')
 var mydata = new Array
 
 Page({
@@ -35,6 +35,22 @@ Page({
         })
       }
     })
+  },
+
+  onPullDownRefresh: function () {
+    messages.where({}).get({
+      success: res => {
+        mydata = res.data
+        for (var i = 0; i < mydata.length; i++) {
+          var timeSpace = this.getTime(Date.parse(mydata[i].date))
+          mydata[i].date = timeSpace
+        }
+        this.setData({
+          dataset: mydata
+        })
+      }
+    })
+    wx.stopPullDownRefresh()
   },
 
   bindChange: function (e) {

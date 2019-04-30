@@ -292,5 +292,7 @@ page{
   height: 1rpx;
   background-color: #AAA;
 }
-
+.scroll-views{
+  height: 100%;
+}
 
